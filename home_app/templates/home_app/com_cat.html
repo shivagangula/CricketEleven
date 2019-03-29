@@ -1,0 +1,23 @@
+<div class="main_container" >
+     <div class="container">
+                        {% if complited.mchstate == 'None' %}
+              <div class="row"></div>
+                        {% else %}
+              <div class="row">
+                   <div class="col-md-12" style="border-bottom : 3px gray solid; border-radius:1px;">
+                       <h1 style="color:black;"1>RECENT</h1>
+                  </div>
+                        {% for i in complited %}
+                 <div onclick="location.href='{% url 'score' i.id %}';"  style="cursor: pointer;"class=" col-md-2 col-md-offset-2" id="card_outer">
+                        <h4 class="card-title">{{ i.team1.name }} Vs {{ i.team2.name }}</h4>
+                              <hr style=" border-top: 1px solid black;">
+                       <h3 class="card-title">{{ i.status }}</h3>
+                       <h5> {{ i.mnum }},{{ i.venue_name }},{{ i.venue_location }}</h5>
+                       <h5 class="card-title">{{ i.srs }}</h5>
+                </div>
+                      {% endfor %}
+             </div>
+
+                      {% endif %}
+      </div>
+      </div>

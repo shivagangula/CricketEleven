@@ -1,0 +1,36 @@
+<div class="main_container" >
+<div class="container">
+                    {% if live %}
+   <div class="row">
+      <div class="col-md-12" style="border-bottom : 3px black solid; border-radius:1px;">
+               <div class="col-md-12">
+               <div class="" id="Foo" style="width:20px;
+                    height:20px;
+                     border-radius:25px;
+                  background-color:green;
+                    float:left;
+                    " >
+                </div>
+              <div class="col-md-0" style="margin-left:25px;">
+                       <h1 style="color:black;" >LIVE</h1>
+                      </div>
+              </div>
+      </div>
+                  {% for i in live %}
+         <div onclick="location.href='{% url 'score' i.id %}';" style="cursor: pointer;"  class=" col-md-2 col-md-offset-2" id="card_outer">
+                   <h4 class="card-title">{{ i.team1.name }} Vs {{ i.team2.name }}</h4>
+                         <hr style=" border-top: 1px solid black;">
+                  <h3 class="card-title">{{ i.status }}</h3>
+                  <h5> {{ i.mnum }},{{ i.venue_name }},{{ i.venue_location }}</h5>
+                 <h5 class="card-title">{{ i.srs }}</h5>
+         </div>
+                {% endfor %}
+     </div>
+       {% else %}
+       <div class="row">
+
+       </div>
+       {% endif %}
+</div>
+
+</div>

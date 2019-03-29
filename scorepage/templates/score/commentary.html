@@ -1,0 +1,28 @@
+<div  class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Over</th>
+                <th>Commentry</th>
+             </tr>
+         </thead>
+         <tbody>
+      {% autoescape off %}
+           {% for i in commentary %}
+                  <tr>
+                     {% if i.over == None %}
+                              <td></td>
+                     {% else %}
+                             <td>{{ i.over }}</td>
+                     {% endif %}
+                              <td>{{ i.comm }}</td>
+                   </tr>
+           {% endfor %}
+       {% endautoescape %}
+         </tbody>
+      </table>
+    </div>
+  </div>
+</div>

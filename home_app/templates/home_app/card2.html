@@ -1,0 +1,18 @@
+<div class="main_container" >
+<div class="container">
+   <div class="row">
+  {% for i in matches %}
+         <div class=" col-md-2 col-md-offset-2" id="card_outer">
+           <h4 class="card-title">{{ i.team1.name }} Vs {{ i.team2.name }}</h4>
+            <hr style=" border-top: 1px solid red;">
+            <h4> {{ i.mnum }},{{ i.venue_name }},{{ i.venue_location }}</h4>
+            <h5 class="card-title">Series : {{ i.srs }}</h5>
+            <h5 class="card-title">Status : {{ i.status }}</h5>
+
+            <button type="button" class="btn btn-primary btn-block float-bottom"><a style="color:white;" href="{% url 'score' i.id %}">more</a></button>
+         </div>
+          {% endfor %}
+     </div>
+
+</div>
+</div>

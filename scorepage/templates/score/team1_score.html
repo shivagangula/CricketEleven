@@ -1,0 +1,63 @@
+<div class="container">
+  <h2>{{ team2.batteam }}-{{ team2.runs }}/{{ team2.wickets }}({{ team2.overs }})</h2>
+  <div class="row">
+    <div class="col-md-8">
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Player Name</th>
+                <th>Runs</th>
+                <th>Balls</th>
+                <th>Fours</th>
+                <th>six</th>
+                <th>status</th>
+             </tr>
+         </thead>
+         <tbody>
+  
+           {% for i in team2.batcard %}
+           <tr>
+               <td>{{ i.name }}</td>
+               <td>{{ i.runs }}</td>
+               <td>{{ i.balls }}</td>
+               <td>{{ i.fours }}</td>
+               <td>{{ i.six }}</td>
+               <td>{{ i.dismissal }}</td>
+           </tr>
+           {% endfor %}
+         </tbody>
+      </table>
+   </div>
+   <div class="col-md-4">
+     <table class="table table-striped">
+         <thead>
+           <tr>
+             <th>blowler</th>
+               <th>O</th>
+               <th>MI</th>
+               <th>R</th>
+               <th>WK</th>
+               <th>W</th>
+               <th>NB</th>
+
+            </tr>
+        </thead>
+        <tbody>
+          {% for i in bowlcard_2 %}
+          <tr>
+              <td>{{ i.name }}</td>
+              <td>{{ i.overs }}</td>
+              <td>{{ i.maidens }}</td>
+              <td>{{ i.runs }}</td>
+              <td>{{ i.wickets }}</td>
+              <td>{{ i.wides }}</td>
+              <td>{{ i.nballs }}</td>
+
+          </tr>
+          {% endfor %}
+        </tbody>
+     </table>
+  </div>
+ </div>
+
+</div>

@@ -1,0 +1,30 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+        <title>Score card</title>
+
+</head>
+<body>
+    {% include 'score/nav.html' %}
+        <div class="container">
+            {% if stat == 'preview' %}
+               {% include 'score/preview.html' %}
+            {% else %}
+                 <div id="run" class="row">
+                    <div class="col-md-12">{% include 'score/title.html' %}</div>
+                    <div class="col-md-12">{% include 'score/team1_score.html' %}</div>
+                    <div class="col-md-12">{% include 'score/team2_score.html' %}</div>
+                    <div class="col-md-12">{% include 'score/commentary.html' %}</div>
+                </div>
+            {% endif %}
+       </div>
+      
+
+</body>
+</html>
