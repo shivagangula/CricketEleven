@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home_app.views import home,new_home
+from home_app.views import new_home
 from scorepage.views import score
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home),
-    path('nhome/', new_home),
+    path('', new_home),
     path('score/<id>',score,name='score')
 ]
