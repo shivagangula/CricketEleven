@@ -1,0 +1,7 @@
+runtime: python37
+entrypoint: gunicorn -b :$PORT cricket11_project.wsgi
+
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
