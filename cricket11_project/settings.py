@@ -26,7 +26,7 @@ SECRET_KEY = 'smkwsw)+nufgsc-d@5!1_j-^f+t=&0gdlb7tk105v2vteqazwf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cricket11.herokuapp.com']
 
 
 # Application definition
