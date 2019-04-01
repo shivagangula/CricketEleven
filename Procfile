@@ -1,1 +1,1 @@
-'web: gunicorn cricket11_project.wsgi --log-file -' 
+'web: gunicorn CricketEleven.wsgi --log-file -' 
