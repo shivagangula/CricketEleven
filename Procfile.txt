@@ -1,1 +1,0 @@
-web: gunicorn cricket11_project.wsgi:application --log-file -
