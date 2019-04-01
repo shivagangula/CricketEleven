@@ -1,5 +1,6 @@
 import requests
 import time
+import json
 
 class Cricbuzz():
 	def __init__(self):
@@ -8,6 +9,9 @@ class Cricbuzz():
 	def crawl_url(self,url):
 		try:
 			r = requests.get(url).json()
+			j = json.dumps(r)
+			r = json.loads(j)
+			print(type(r))
 			return r
 		except Exception:
 			raise
@@ -73,7 +77,6 @@ class Cricbuzz():
 		crawled_content = self.crawl_url(url)
 		matches = crawled_content['matches']
 		info = []
-		print(type(crawled_content))
 
 
 		for match in matches:
