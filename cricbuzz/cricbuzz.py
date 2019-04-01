@@ -12,9 +12,9 @@ class Cricbuzz():
 			r = requests.get(url).json()
 			dump = json.dumps(r)
 			io = StringIO(dump)
-			r=json.load(io)
-			print(type(io))
-			return r
+			jr=json.load(io)
+			print(type(jr))
+			return jr
 		except Exception:
 			raise
 
