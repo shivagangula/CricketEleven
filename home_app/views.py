@@ -29,5 +29,4 @@ def new_home(request):
     send['live'] = live_match
     send['complited'] = complt_match
     send['preview'] = preview_match
-    print(send['live'])
     return render(request, 'home_app/new_home.html', send)

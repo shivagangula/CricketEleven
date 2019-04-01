@@ -20,6 +20,6 @@ from scorepage.views import score
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', new_home),
+    path('', new_home, name='home'),
     path('score/<id>',score,name='score')
 ]

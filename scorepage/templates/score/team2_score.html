@@ -1,22 +1,23 @@
+{% if team2 %}
 <div class="container">
-  <h2>{{ team1.batteam }}-{{ team1.runs }}/{{ team1.wickets }}({{ team1.overs }})</h2>
-
+  <h2>{{ team2.batteam }}-{{ team2.runs }}/{{ team2.wickets }}({{ team2.overs }})</h2>
   <div class="row">
     <div class="col-md-8">
-       <table class="table table-striped">
-           <thead>
-              <tr> 
-                 <th>Player Name</th>
-                 <th>Runs</th>
-                 <th>Balls</th>
-                 <th>Fours</th>
-                 <th>six</th>
-                 <th>status</th>
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Player Name</th>
+                <th>Runs</th>
+                <th>Balls</th>
+                <th>Fours</th>
+                <th>six</th>
+                <th>status</th>
              </tr>
-          </thead>
-          <tbody>
-             {% for i in team1.batcard %}
-             <tr>
+         </thead>
+         <tbody>
+
+           {% for i in team2.batcard %}
+           <tr>
                <td>{{ i.name }}</td>
                <td>{{ i.runs }}</td>
                <td>{{ i.balls }}</td>
@@ -25,38 +26,46 @@
                <td>{{ i.dismissal }}</td>
            </tr>
            {% endfor %}
-    </tbody>
-  </table>
-</div>
-<div class="col-md-4">
-  <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>blowler</th>
-            <th>O</th>
-            <th>MI</th>
-            <th>R</th>
-            <th>WK</th>
-            <th>W</th>
-            <th>NB</th>
+         </tbody>
+      </table>
+   </div>
+   <div class="col-md-4">
+     <table class="table table-striped">
+         <thead>
+           <tr>
+             <th>blowler</th>
+               <th>O</th>
+               <th>MI</th>
+               <th>R</th>
+               <th>WK</th>
+               <th>W</th>
+               <th>NB</th>
 
-         </tr>
-     </thead>
-     <tbody>
-       {% for i in bowlcard_1 %}
-       <tr>
-           <td>{{ i.name }}</td>
-           <td>{{ i.overs }}</td>
-           <td>{{ i.maidens }}</td>
-           <td>{{ i.runs }}</td>
-           <td>{{ i.wickets }}</td>
-           <td>{{ i.wides }}</td>
-           <td>{{ i.nballs }}</td>
+            </tr>
+        </thead>
+        <tbody>
+          {% for i in bowlcard_2 %}
+          <tr>
+              <td>{{ i.name }}</td>
+              <td>{{ i.overs }}</td>
+              <td>{{ i.maidens }}</td>
+              <td>{{ i.runs }}</td>
+              <td>{{ i.wickets }}</td>
+              <td>{{ i.wides }}</td>
+              <td>{{ i.nballs }}</td>
 
-       </tr>
-       {% endfor %}
-     </tbody>
-  </table>
+          </tr>
+          {% endfor %}
+        </tbody>
+     </table>
+  </div>
+ </div>
 </div>
+{% else %}
+<div class="container">
+  <div class="row">
+
+  </div>
+
 </div>
-</div>
+{% endif %}

@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'smkwsw)+nufgsc-d@5!1_j-^f+t=&0gdlb7tk105v2vteqazwf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['players-236114.appspot.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
