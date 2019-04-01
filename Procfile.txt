@@ -1,1 +1,1 @@
-web: gunicorn CricketEleven.wsgi
+web: gunicorn cricket11_project.wsgi
