@@ -1,12 +1,12 @@
 from django.shortcuts import render,HttpResponse
 from home_app.views import c
-
+import json
 
 def score(request, id):
    score = c.scorecard(id)
    info = c.matchinfo(id)
    commentary = c.commentary(id)
-   print(commentary)
+   print(type(score))
    send = {      'matchinfo': info,
                  'commentary':commentary['commentary'],
                  }

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from pycricbuzz import Cricbuzz
+from cricbuzz import Cricbuzz
 import json
 import requests
 c = Cricbuzz()
