@@ -1,7 +1,7 @@
 import requests
 import time
 import json
-from io import StringIO
+from urllib.request import urlopen
 
 class Cricbuzz():
 	def __init__(self):
@@ -9,12 +9,11 @@ class Cricbuzz():
 
 	def crawl_url(self,url):
 		try:
-			r = requests.get(url).json()
-			dump = json.dumps(r)
-			io = StringIO(dump)
-			jr=json.load(io)
-			print(type(jr))
-			return jr
+			# r = requests.get(url).json()
+			response = urlopen(url)
+			string = response.read().decode('utf-8')
+			r = json.loads(string)
+			return r
 		except Exception:
 			raise
 
@@ -78,7 +77,6 @@ class Cricbuzz():
 		url = "http://mapps.cricbuzz.com/cbzios/match/livematches"
 		crawled_content = self.crawl_url(url)
 		matches = crawled_content['matches']
-		print(type(matches))
 		info = []
 
 

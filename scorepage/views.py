@@ -6,7 +6,6 @@ def score(request, id):
    score = c.scorecard(id)
    info = c.matchinfo(id)
    commentary = c.commentary(id)
-   print(type(score))
    send = {      'matchinfo': info,
                  'commentary':commentary['commentary'],
                  }
