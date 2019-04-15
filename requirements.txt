@@ -13,7 +13,7 @@ isort==4.3.4
 kiwisolver==1.0.1
 lazy-object-proxy==1.3.1
 mccabe==0.6.1
-PyAutoGUI==0.9.41
+
 pycricbuzz==2.3
 pylint==2.2.2
 PyMsgBox==1.0.6
