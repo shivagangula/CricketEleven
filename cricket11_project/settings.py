@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ['cricket11.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'corsheaders',
     'home_app.apps.HomeAppConfig',
     'scorepage.apps.ScorepageConfig',
     'django.contrib.admin',
@@ -47,13 +46,11 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-	'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'cricket11_project.urls'
