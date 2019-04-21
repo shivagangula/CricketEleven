@@ -1,7 +1,6 @@
 import requests
 import time
 import json
-from urllib.request import urlopen
 
 class Cricbuzz():
 	def __init__(self):
