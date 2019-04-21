@@ -9,10 +9,7 @@ class Cricbuzz():
 
 	def crawl_url(self,url):
 		try:
-			# r = requests.get(url).json()
-			response = urlopen(url)
-			string = response.read().decode('utf-8')
-			r = json.loads(string)
+			r = requests.get(url).json()
 			return r
 		except Exception:
 			raise
