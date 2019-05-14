@@ -11,9 +11,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import django_heroku
-import corsheaders
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -27,7 +24,7 @@ SECRET_KEY = 'smkwsw)+nufgsc-d@5!1_j-^f+t=&0gdlb7tk105v2vteqazwf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cricket11.herokuapp.com']
+ALLOWED_HOSTS = ['shivagangula.pythonanywhere.com']
 
 
 # Application definition
