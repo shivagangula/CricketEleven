@@ -24,7 +24,7 @@ SECRET_KEY = 'smkwsw)+nufgsc-d@5!1_j-^f+t=&0gdlb7tk105v2vteqazwf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['shivagangula.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -120,4 +120,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = '/static/'
-django_heroku.settings(locals())
